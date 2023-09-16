@@ -11,8 +11,7 @@ class DataBase
     private $connect;
     public function __construct()
     {
-        global $database;
-        $this->connect = Connection::getInstance($database);
+        $this->connect = Connection::getInstance();
     }
     public function query($sql = '', $data = [], $statementStatus = false)
     {
